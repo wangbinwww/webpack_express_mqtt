@@ -43,8 +43,8 @@ MqttServer.on('published', function (packet, client) {
 
 
     switch (topic) {
-        case 'hmdata':
-            console.log('mqtt-hmdata: ', 'topic =' + topic + ',message = ' + packet.payload.toString());
+        case 'HMdata':
+            console.log('mqtt-HMdata: ', 'topic =' + topic + ',message = ' + packet.payload.toString());
             //MqttServer.publish({topic: 'other', payload: 'sssss'});
             MqttServer.publish(qtt); //推送一个json对象,这个推送自己也会收到。
             //MqttServer.publish('other',JSON.stringify(qtt),{qos:1, retain: true});

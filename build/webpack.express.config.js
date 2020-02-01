@@ -9,7 +9,7 @@ module.exports = {
     // entry: {
     //     main: __dirname + "../src/main_express.js",
     // },
-    devtool: "inline-source-map",
+    //devtool: "inline-source-map",
     output: {
         filename: "[name].[hash:2].js", // 打包后的文件名称
         path: path.resolve(__dirname, "../dist/express") // 打包后的目录
