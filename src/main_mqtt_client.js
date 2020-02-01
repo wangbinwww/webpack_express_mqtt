@@ -3,9 +3,8 @@ var client = mqtt.connect({
     clientId: 'SISPOWER_' + Math.random().toString(16).substr(2, 8),
     host: 'localhost',
     port: 1883,
-    // username: 'iconmqtt/sis1',
+    //username: 'iconmqtt/sis1',
     //password: 'bRfKrHYBydtYujvS',
-    database: 'MqttDB'
 });
 var num = 0;
 var qtt = {}; //定义消息（可以为字符串、对象等）
