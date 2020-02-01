@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:express": "webpack --config build/webpack.express.config.js",
-    "build:mqtt": "webpack --config build/webpack.mqtt.config.js"
+    "build:mqtt": "webpack --config build/webpack.mqtt.config.js",
+    "dev:express": "webpack --config build/webpack.express.global.config.js",
+    "dev:mqtt": "webpack --config build/webpack.mqtt.global.config.js"
   },
   "author": "wangbin",
   "license": "ISC",
@@ -23,6 +25,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "utf-8-validate": "^5.0.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
   }
 }
