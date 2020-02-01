@@ -9,7 +9,6 @@ var client = mqtt.connect({
   port: 1883,
   username: 'iconmqtt/sis1',
   password: 'bRfKrHYBydtYujvS',
-  database: 'MqttDB'
 });
 
 client.on('connect', function () {

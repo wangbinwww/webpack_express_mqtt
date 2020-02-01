@@ -2,6 +2,7 @@ var moment = require('moment');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
+    port: 1888,
     user: 'root',
     password: 'admin',
     database: 'test'
@@ -9,11 +10,14 @@ var connection = mysql.createConnection({
 connection.connect();
 var userAddSql = 'INSERT INTO home(datetime,temp,humi) VALUES(?,?,?)'; //SQL插入语句格式
 var userAddSql_Params = ['2018-7-1', 27.4, 85]; //插入语句字段数据
-
-
 var mosca = require('mosca');
 var MqttServer = new mosca.Server({
-    port: 1883
+    host: 'localhost',
+    port: 1888,
+    user: 'root',
+    password: 'admin',
+    database: 'test'
+
 });
 
 MqttServer.on('clientConnected', function (client) {
